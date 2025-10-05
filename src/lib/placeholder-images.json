@@ -1,0 +1,35 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "user-avatar-1",
+      "description": "User avatar for a professional male.",
+      "imageUrl": "https://i.pravatar.cc/150?u=admin",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user-avatar-2",
+      "description": "User avatar for a professional male.",
+      "imageUrl": "https://i.pravatar.cc/150?u=anoop",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user-avatar-3",
+      "description": "User avatar for a professional female.",
+      "imageUrl": "https://i.pravatar.cc/150?u=priya",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user-avatar-4",
+      "description": "User avatar for a professional male.",
+      "imageUrl": "https://i.pravatar.cc/150?u=rajesh",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user-avatar-5",
+      "description": "User avatar for a professional female.",
+      "imageUrl": "https://i.pravatar.cc/150?u=sunita",
+      "imageHint": "woman portrait"
+    }
+  ]
+}
