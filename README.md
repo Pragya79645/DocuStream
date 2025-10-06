@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DocuStream
+DocuStream – Automated Document Management Solution
 
-## Getting Started
+# Overview
+DocuStream is an AI-powered document management system designed to solve the modern organization’s biggest challenge: information overload. Organizations generate thousands of documents daily—reports, invoices, technical drawings, HR policies, and more. It helps stakeholders quickly access the information that matters most, while preserving traceability and institutional knowledge.
 
-First, run the development server:
+DocuStream transforms chaotic document repositories into a strategic asset, accelerating decision-making, improving compliance, and reducing duplicated effort.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Key Problems Solved
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Information Latency: Employees waste hours reading long documents to find actionable points.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Siloed Awareness: Departments operate in isolation, missing updates from other teams.
 
-## Learn More
+Compliance Risk: Critical regulatory updates get buried, increasing legal exposure.
 
-To learn more about Next.js, take a look at the following resources:
+Knowledge Attrition: Valuable institutional memory is lost when employees leave.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Duplicated Effort: Teams independently summarize documents, creating redundant work and version-control issues.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Key Features
 
-## Deploy on Vercel
+AI-Powered Summarization: Automatically extracts actionable insights from long, complex documents—saving hours of manual review.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Intelligent Routing: Sends relevant summaries to the right stakeholders, bridging departmental silos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Compliance Alerts: Flags important regulatory or policy updates to prevent missed deadlines and legal risks.
+
+Multi-Format Support: Handles PDFs, Word, Excel, scanned images, and multilingual documents.
+
+Central Knowledge Repository: Stores and indexes organizational knowledge for easy access and long-term retention.
+
+Duplicate Work Prevention: Teams access the same summarized insights, eliminating repetitive manual efforts.
+
+
+# Benefits
+
+1. Faster Decision-Making: Critical information reaches decision-makers instantly, reducing delays caused by document overload.
+2. Enhanced Cross-Department Collaboration: Teams stay aligned and informed, breaking down communication silos.
+3. Improved Compliance & Risk Management: Regulatory and operational risks are reduced through automated alerts and traceable document history.
+4. Knowledge Preservation: Institutional knowledge is maintained even as employees transition, ensuring continuity.
+5. Reduced Administrative Burden: Manual summarization and repeated work are minimized, freeing teams to focus on high-value tasks.
+
+# Usage
+
+1. Upload documents via the dashboard or integrate with your existing email/cloud systems.
+2. AI processes the documents and generates concise summaries.
+3. Stakeholders receive automated notifications with relevant insights and the action points derived from the lenghty documents so they can act immediately instead of wasting time by reading the entire document where chances are there that important things can be missed..
+4. Search, filter, and track documents effortlessly using the intuitive UI.
+
+# Tech Stack
+
+Backend: RestAPI, NLP/AI models for summarization
+Frontend: Next.js, Tailwind CSS
+Database: Firebase
+Cloud Storage: Cloudinary
+Authentication: Firebase Auth
+
+
+
+
+
