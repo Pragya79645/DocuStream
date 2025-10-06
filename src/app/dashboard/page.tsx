@@ -8,8 +8,6 @@ import {
 } from '@/components/ui/card';
 import { DocumentListControls } from '@/components/dashboard/document-list-controls';
 import { DocumentCard } from '@/components/dashboard/document-card';
-import { ComplianceDeadlines } from '@/components/dashboard/compliance-deadlines';
-import { SharedAwarenessDashboard } from '@/components/dashboard/shared-awareness-dashboard';
 import { Document, User, Category } from '@/lib/types';
 import { useEffect, useState, useMemo } from 'react';
 import { listenToDocumentsForUser } from '@/lib/client-services/documents.client.service';
@@ -112,19 +110,6 @@ export default function DashboardPage() {
 
   return (
     <div className="flex flex-col gap-6 py-4">
-      {/* Compliance Deadlines Section */}
-      <ComplianceDeadlines 
-        userId={currentUser.id} 
-        userCategoryIds={currentUser.categoryIds}
-        documents={userDocuments}
-      />
-      
-      {/* Shared Awareness Dashboard */}
-      <SharedAwarenessDashboard 
-        userDepartmentIds={currentUser.categoryIds}
-        categories={categories}
-      />
-      
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold font-headline">My Department Documents</h1>

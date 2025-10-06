@@ -32,6 +32,8 @@ import {
   CheckSquare,
   Archive,
   Globe,
+  Calendar,
+  UsersIcon,
 } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
 import type { Category } from '@/lib/types';
@@ -112,6 +114,30 @@ export function AppSidebar() {
               <Link href="/dashboard/compliance">
                 <CheckSquare />
                 <span>Compliance</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              isActive={isActive('/dashboard/compliance-deadlines')}
+              tooltip="Compliance Deadlines"
+            >
+              <Link href="/dashboard/compliance-deadlines">
+                <Calendar />
+                <span>Compliance Deadlines</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              isActive={isActive('/dashboard/shared-awareness')}
+              tooltip="Shared Awareness Dashboard"
+            >
+              <Link href="/dashboard/shared-awareness">
+                <UsersIcon />
+                <span>Shared Awareness</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

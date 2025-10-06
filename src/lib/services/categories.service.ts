@@ -22,7 +22,7 @@ export async function getCategories(): Promise<Category[]> {
   }
 }
 
-export async function createCategory(category: Omit<Category, 'id'>): Promise<string> {
+export async function createCategory(category: Category): Promise<string> {
     const db = getDb();
     try {
         // Check for uniqueness of ID

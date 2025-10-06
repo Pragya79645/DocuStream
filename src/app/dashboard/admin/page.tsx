@@ -8,6 +8,7 @@ import { UserManagement } from '@/components/admin/user-management';
 import { CategoryManagement } from '@/components/admin/category-management';
 import { DocumentManagement } from '@/components/admin/document-management';
 import { ReportingAnalytics } from '@/components/admin/reporting-analytics';
+import { DepartmentalEngagementReport } from '@/components/admin/departmental-engagement-report';
 import AdminComplianceWrapper from '@/components/admin/admin-compliance-wrapper';
 import { useAuth } from '@/hooks/use-auth';
 import { useRouter } from 'next/navigation';
@@ -36,12 +37,13 @@ function AdminPageComponent() {
     <div className="py-4">
       <h1 className="text-2xl font-bold font-headline mb-4">Admin Dashboard</h1>
       <Tabs defaultValue={tab} className="w-full">
-        <TabsList className="grid w-full grid-cols-5">
+        <TabsList className="grid w-full grid-cols-6">
           <TabsTrigger value="users">Users</TabsTrigger>
           <TabsTrigger value="categories">Categories</TabsTrigger>
           <TabsTrigger value="documents">Documents</TabsTrigger>
           <TabsTrigger value="compliance">Compliance</TabsTrigger>
           <TabsTrigger value="reports">Reports</TabsTrigger>
+          <TabsTrigger value="engagement">Engagement</TabsTrigger>
         </TabsList>
         <TabsContent value="users">
           <Card>
@@ -105,6 +107,19 @@ function AdminPageComponent() {
             </CardHeader>
             <CardContent>
                 <ReportingAnalytics />
+            </CardContent>
+          </Card>
+        </TabsContent>
+        <TabsContent value="engagement">
+          <Card>
+            <CardHeader>
+              <CardTitle>Departmental Engagement Report</CardTitle>
+              <CardDescription>
+                Identify workflow inefficiencies and overloaded teams across departments.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <DepartmentalEngagementReport />
             </CardContent>
           </Card>
         </TabsContent>
