@@ -35,16 +35,21 @@ export default function DashboardPage() {
     
     // Then filter by completion status
     return targetingFilteredDocs.filter(doc => {
-      const completedActions = doc.actionPoints.filter(ap => ap.isCompleted).length;
-      const totalActions = doc.actionPoints.length;
-      const isCompleted = totalActions > 0 && completedActions === totalActions;
-      const hasPendingActions = totalActions > 0 && completedActions < totalActions;
+      const actionPoints = doc.actionPoints || [];
+      const completedActions = actionPoints.filter(ap => ap.isCompleted).length;
+      const totalActions = actionPoints.length;
+      
+      // A document is completed if: status is "processed" OR (has action points AND all are completed)
+      const isCompleted = doc.status === 'processed' || (totalActions > 0 && completedActions === totalActions);
+      
+      // A document is pending if: status is "processing" OR not completed
+      const isPending = doc.status === 'processing' || !isCompleted;
 
       switch (activeTab) {
         case 'completed':
           return isCompleted;
         case 'pending':
-          return hasPendingActions;
+          return isPending;
         case 'all':
         default:
           return true;
@@ -70,6 +75,9 @@ export default function DashboardPage() {
             description: 'Could not fetch initial data.',
             variant: 'destructive'
         })
+      } finally {
+        // Ensure we clear the loading state even if documents listener will also toggle it.
+        setLoading(false);
       }
     }
     
@@ -82,16 +90,14 @@ export default function DashboardPage() {
   useEffect(() => {
     if (!currentUser) return;
 
-    setLoading(true);
     const unsubscribe = listenToDocumentsForUser(currentUser.id, currentUser.categoryIds, (docs) => {
         setUserDocuments(docs);
-        setLoading(false);
     });
 
     return () => unsubscribe();
   }, [currentUser]);
   
-  if (loading || authLoading || allUsers.length === 0) {
+  if (loading || authLoading) {
     return (
         <div className="flex items-center justify-center py-20">
             <Loader2 className="h-12 w-12 animate-spin text-primary" />

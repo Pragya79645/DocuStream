@@ -27,7 +27,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { useAuth } from '@/hooks/use-auth';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import type { Notification } from '@/lib/types';
 import { listenToUnreadNotifications, markAllNotificationsAsRead } from '@/lib/client-services/notifications.client.service';
 import { formatDistanceToNow } from 'date-fns';
@@ -64,16 +64,16 @@ export function AppHeader({ breadcrumbs, pageTitle }: AppHeaderProps) {
       <SidebarTrigger className="md:hidden" />
       <div className="w-full flex-1">
         <Breadcrumb className="hidden md:flex">
-          <BreadcrumbList>
+            <BreadcrumbList>
             {breadcrumbs.map((crumb, index) => (
-              <>
-                <BreadcrumbItem key={crumb.href}>
+              <Fragment key={crumb.href}>
+                <BreadcrumbItem>
                   <BreadcrumbLink asChild>
                     <Link href={crumb.href}>{crumb.label}</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 {index < breadcrumbs.length -1 && <BreadcrumbSeparator />}
-              </>
+              </Fragment>
             ))}
              <BreadcrumbSeparator />
              <BreadcrumbItem>
