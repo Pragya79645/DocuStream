@@ -58,9 +58,9 @@ export default function LoginPage() {
             <div className="mx-auto mb-4 flex items-center justify-center rounded-full bg-primary p-4 text-primary-foreground w-20 h-20">
               <Train className="h-10 w-10" />
             </div>
-            <CardTitle className="font-headline text-3xl">Kochi Metro DocuSnap</CardTitle>
+            <CardTitle className="font-headline text-3xl">DocuStream</CardTitle>
             <CardDescription className="pt-2">
-              Automated Document Intelligence for KMRL
+              Automated Document Intelligence
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4 pt-4">

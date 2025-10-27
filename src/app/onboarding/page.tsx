@@ -59,15 +59,10 @@ export default function OnboardingPage() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-600">
                 <span className="text-lg font-bold text-white">K</span>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900">KMRCL</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Automated Document Handling</h1>
             </div>
             <nav className="hidden gap-8 md:flex">
-              <a href="#features" className="text-sm font-medium text-gray-600 hover:text-cyan-600">
-                Features
-              </a>
-              <a href="#cta" className="text-sm font-medium text-gray-600 hover:text-cyan-600">
-                Get Started
-              </a>
+           
             </nav>
           </div>
         </div>
@@ -224,9 +219,7 @@ export default function OnboardingPage() {
       {/* Footer */}
       <footer className="border-t border-cyan-100 bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl text-center">
-          <p className="text-gray-600">
-            © 2025 KMRCL. Empowering metro operations through intelligent document management.
-          </p>
+        
         </div>
       </footer>
     </main>
