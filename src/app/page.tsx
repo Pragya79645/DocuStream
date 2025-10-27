@@ -86,6 +86,9 @@ export default function HomePage() {
                 >
                   Dashboard
                 </a>
+                <Link href="/onboarding" className="px-8 py-3 text-sm font-semibold text-slate-800 hover:text-cyan-600 hover:bg-white rounded-full transition-all duration-200 shadow-sm hover:shadow-lg transform hover:scale-105">
+                  Onboarding
+                </Link>
               </div>
             </div>
 
@@ -127,6 +130,9 @@ export default function HomePage() {
               >
                 Dashboard
               </a>
+              <Link href="/onboarding" className="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors duration-200">
+                Onboarding
+              </Link>
             </div>
           </div>
         </div>
@@ -186,14 +192,7 @@ export default function HomePage() {
                     Start Free Trial
                   </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-cyan-600 bg-transparent backdrop-blur-sm font-semibold px-6 lg:px-8 py-3 lg:py-4 rounded-xl transition-all duration-300"
-                >
-                  <FaEye className="mr-3" />
-                  Watch Demo
-                </Button>
+               
               </div>
 
               <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 pt-6 lg:pt-8 border-t border-white/20">
