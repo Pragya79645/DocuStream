@@ -1,11 +1,14 @@
 # Login credentials
 
 Admin@gmail.com 000000
+
 Designer@gmail.com 123456
+
 Engineer@gmail.com 222222
+
 Marketing@gmail.com 333333
 
-DocuStream
+
 # DocuStream
 DocuStream – Automated Document Management Solution
 
@@ -64,6 +67,7 @@ Frontend: Next.js, Tailwind CSS
 Database: Firebase
 Cloud Storage: Cloudinary
 Authentication: Firebase Auth
+
 
 
 
