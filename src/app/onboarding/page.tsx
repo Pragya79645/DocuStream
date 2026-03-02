@@ -214,7 +214,7 @@ export default function OnboardingPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
-      </section>
+      </section> 
 
       {/* Footer */}
       <footer className="border-t border-cyan-100 bg-white px-4 py-12 sm:px-6 lg:px-8">
